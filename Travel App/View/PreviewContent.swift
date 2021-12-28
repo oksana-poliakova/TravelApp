@@ -8,15 +8,16 @@
 import UIKit
 
 class PreviewContent: UIView {
+    // MARK: - Properties
     
     var title = UILabel()
+    let signInButton = UIButton()
     let buttonWithUnderline = UnderlineButton()
-    let buttonsStackView = UIStackView()
+    let containerOfButtonAndTitleStackView = UIStackView()
     let mainStackView = UIStackView()
     
     init() {
         super.init(frame: .zero)
-        
         setupUI()
     }
     
@@ -24,36 +25,60 @@ class PreviewContent: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Setup UI
+    
     func setupUI() {
-        title.text = "Enjoy every moment with us!"
+        title.text = "Enjoy every \n moment with us!"
+        title.numberOfLines = 0
         title.textColor = .white
-        title.font = UIFont.boldSystemFont(ofSize: 20)
+        title.font = UIFont(name: "Gupter-Bold", size: 40)
         title.textAlignment = .center
         addSubview(title)
         
-        buttonWithUnderline.backgroundColor = UIColor(red: 200/255.0, green: 44/255.0, blue: 44/255.0, alpha: 1.0)
-        buttonWithUnderline.setTitle("Create an account", for: .normal)
+        /// Sign in button
+        signInButton.backgroundColor = UIColor(red: 200/255.0, green: 44/255.0, blue: 44/255.0, alpha: 1.0)
+        signInButton.layer.cornerRadius = 16
+        signInButton.setTitle("Sign in", for: .normal)
+        signInButton.setTitleColor(.white, for: .normal)
+        signInButton.titleLabel?.font = UIFont(name: "Gupter-Bold", size: 24)
+        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(signInButton)
+        
+        /// Button with underline
         buttonWithUnderline.translatesAutoresizingMaskIntoConstraints = false
         buttonWithUnderline.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         addSubview(buttonWithUnderline)
         
-        buttonsStackView.axis = .vertical
-        buttonsStackView.distribution = .fillEqually
-        buttonsStackView.spacing = 2
-        buttonsStackView.alignment = .fill
-        buttonsStackView.translatesAutoresizingMaskIntoConstraints = false
-     
-        [buttonsStackView, buttonWithUnderline].forEach {
+        /// StackView with title and Sign in button
+        containerOfButtonAndTitleStackView.axis = .vertical
+        containerOfButtonAndTitleStackView.distribution = .fill
+        containerOfButtonAndTitleStackView.spacing = 15
+        containerOfButtonAndTitleStackView.alignment = .center
+        containerOfButtonAndTitleStackView.translatesAutoresizingMaskIntoConstraints = false
+        [title, signInButton].forEach {
+            containerOfButtonAndTitleStackView.addArrangedSubview($0)
+        }
+        
+        /// StackView with ContainerOfButtonAndTitleStackView and buttonWithUnderline
+        mainStackView.axis = .vertical
+        mainStackView.distribution = .fill
+        mainStackView.spacing = 25
+        mainStackView.alignment = .center
+        mainStackView.translatesAutoresizingMaskIntoConstraints = false
+        [containerOfButtonAndTitleStackView, buttonWithUnderline].forEach {
             mainStackView.addArrangedSubview($0)
         }
-
-        addSubview(buttonsStackView)
+        addSubview(mainStackView)
         
+        /// Constraints
         NSLayoutConstraint.activate([
-            buttonsStackView.topAnchor.constraint(equalTo: topAnchor),
-            buttonsStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            buttonsStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            buttonsStackView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            mainStackView.topAnchor.constraint(equalTo: topAnchor),
+            mainStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            signInButton.widthAnchor.constraint(equalToConstant: 165),
+            signInButton.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
     

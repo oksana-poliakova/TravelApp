@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		A1C5F1F32779BA9D00865E08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F1F22779BA9D00865E08 /* AppDelegate.swift */; };
 		A1C5F1F52779BA9D00865E08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F1F42779BA9D00865E08 /* SceneDelegate.swift */; };
-		A1C5F1F72779BA9D00865E08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F1F62779BA9D00865E08 /* ViewController.swift */; };
+		A1C5F1F72779BA9D00865E08 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F1F62779BA9D00865E08 /* LoginScreenViewController.swift */; };
 		A1C5F1FC2779BAA000865E08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1C5F1FB2779BAA000865E08 /* Assets.xcassets */; };
 		A1C5F1FF2779BAA000865E08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C5F1FD2779BAA000865E08 /* LaunchScreen.storyboard */; };
+		A1C5F20E2779DF8A00865E08 /* PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F20D2779DF8A00865E08 /* PreviewContent.swift */; };
+		A1C5F2102779E12200865E08 /* UnderlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F20F2779E12200865E08 /* UnderlineButton.swift */; };
+		A1C5F216277B59DD00865E08 /* Gupter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1C5F213277B59DC00865E08 /* Gupter-Bold.ttf */; };
+		A1C5F218277B59DD00865E08 /* Gupter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1C5F215277B59DD00865E08 /* Gupter-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A1C5F1EF2779BA9D00865E08 /* Travel App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C5F1F22779BA9D00865E08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1C5F1F42779BA9D00865E08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A1C5F1F62779BA9D00865E08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A1C5F1F62779BA9D00865E08 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		A1C5F1FB2779BAA000865E08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1C5F1FE2779BAA000865E08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1C5F2002779BAA000865E08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1C5F20D2779DF8A00865E08 /* PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContent.swift; sourceTree = "<group>"; };
+		A1C5F20F2779E12200865E08 /* UnderlineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineButton.swift; sourceTree = "<group>"; };
+		A1C5F213277B59DC00865E08 /* Gupter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gupter-Bold.ttf"; sourceTree = "<group>"; };
+		A1C5F215277B59DD00865E08 /* Gupter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gupter-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,82 @@
 		A1C5F1F12779BA9D00865E08 /* Travel App */ = {
 			isa = PBXGroup;
 			children = (
-				A1C5F1F22779BA9D00865E08 /* AppDelegate.swift */,
-				A1C5F1F42779BA9D00865E08 /* SceneDelegate.swift */,
-				A1C5F1F62779BA9D00865E08 /* ViewController.swift */,
-				A1C5F1FB2779BAA000865E08 /* Assets.xcassets */,
-				A1C5F1FD2779BAA000865E08 /* LaunchScreen.storyboard */,
+				A1C5F20A2779D4B300865E08 /* Application */,
+				A1C5F2062779D45500865E08 /* View */,
+				A1C5F2092779D46C00865E08 /* Extensions */,
+				A1C5F2082779D46400865E08 /* Model */,
+				A1C5F2072779D45D00865E08 /* Controllers */,
+				A1C5F20B2779D4CC00865E08 /* Resources */,
 				A1C5F2002779BAA000865E08 /* Info.plist */,
 			);
 			path = "Travel App";
+			sourceTree = "<group>";
+		};
+		A1C5F2062779D45500865E08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1C5F20C2779D50B00865E08 /* Cells */,
+				A1C5F20D2779DF8A00865E08 /* PreviewContent.swift */,
+				A1C5F20F2779E12200865E08 /* UnderlineButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1C5F2072779D45D00865E08 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1C5F1F62779BA9D00865E08 /* LoginScreenViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A1C5F2082779D46400865E08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1C5F2092779D46C00865E08 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A1C5F20A2779D4B300865E08 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A1C5F1F22779BA9D00865E08 /* AppDelegate.swift */,
+				A1C5F1F42779BA9D00865E08 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A1C5F20B2779D4CC00865E08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1C5F212277B59BF00865E08 /* Fonts */,
+				A1C5F1FD2779BAA000865E08 /* LaunchScreen.storyboard */,
+				A1C5F1FB2779BAA000865E08 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A1C5F20C2779D50B00865E08 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A1C5F212277B59BF00865E08 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A1C5F213277B59DC00865E08 /* Gupter-Bold.ttf */,
+				A1C5F215277B59DD00865E08 /* Gupter-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +199,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C5F1FF2779BAA000865E08 /* LaunchScreen.storyboard in Resources */,
+				A1C5F216277B59DD00865E08 /* Gupter-Bold.ttf in Resources */,
+				A1C5F218277B59DD00865E08 /* Gupter-Regular.ttf in Resources */,
 				A1C5F1FC2779BAA000865E08 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,8 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1C5F1F72779BA9D00865E08 /* ViewController.swift in Sources */,
+				A1C5F1F72779BA9D00865E08 /* LoginScreenViewController.swift in Sources */,
 				A1C5F1F32779BA9D00865E08 /* AppDelegate.swift in Sources */,
+				A1C5F20E2779DF8A00865E08 /* PreviewContent.swift in Sources */,
+				A1C5F2102779E12200865E08 /* UnderlineButton.swift in Sources */,
 				A1C5F1F52779BA9D00865E08 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
