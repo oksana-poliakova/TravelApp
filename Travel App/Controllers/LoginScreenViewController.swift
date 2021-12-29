@@ -10,7 +10,8 @@ import UIKit
 class LoginScreenViewController: UIViewController {
     
     // MARK: - Properties
-    let previewContainerView = PreviewContent()
+    private let previewContainerView = PreviewContent()
+    private let signInPreviewContentView = SignInPreviewContent()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +26,21 @@ class LoginScreenViewController: UIViewController {
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         view.addSubview(backgroundImage)
         
-        /// PreviewContainerView
-        previewContainerView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(previewContainerView)
-        
+        /// Appearance
+        [previewContainerView, signInPreviewContentView].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview($0)
+        }
+
         /// Constraints
         NSLayoutConstraint.activate([
             previewContainerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             previewContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            previewContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor) 
+            previewContainerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            
+            signInPreviewContentView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            signInPreviewContentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            signInPreviewContentView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
 }

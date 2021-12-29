@@ -10,11 +10,11 @@ import UIKit
 class PreviewContent: UIView {
     // MARK: - Properties
     
-    var title = UILabel()
-    let signInButton = UIButton()
-    let buttonWithUnderline = UnderlineButton()
-    let containerOfButtonAndTitleStackView = UIStackView()
-    let mainStackView = UIStackView()
+    private var title = UILabel()
+    private let signInButton = SignInButton()
+    private let buttonWithUnderline = UnderlineButton()
+    private let containerOfButtonAndTitleStackView = UIStackView()
+    private let mainStackView = UIStackView()
     
     init() {
         super.init(frame: .zero)
@@ -28,6 +28,7 @@ class PreviewContent: UIView {
     // MARK: - Setup UI
     
     func setupUI() {
+        /// Title
         title.text = "Enjoy every \n moment with us!"
         title.numberOfLines = 0
         title.textColor = .white
@@ -36,11 +37,6 @@ class PreviewContent: UIView {
         addSubview(title)
         
         /// Sign in button
-        signInButton.backgroundColor = UIColor(red: 200/255.0, green: 44/255.0, blue: 44/255.0, alpha: 1.0)
-        signInButton.layer.cornerRadius = 16
-        signInButton.setTitle("Sign in", for: .normal)
-        signInButton.setTitleColor(.white, for: .normal)
-        signInButton.titleLabel?.font = UIFont(name: "Gupter-Bold", size: 24)
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         addSubview(signInButton)
         
@@ -80,6 +76,13 @@ class PreviewContent: UIView {
             signInButton.widthAnchor.constraint(equalToConstant: 165),
             signInButton.heightAnchor.constraint(equalToConstant: 50),
         ])
+    }
+    
+    // MARK: - Change state for Sign in
+    
+    func changeState() {
+       
+        
     }
     
     @objc func buttonAction(sender: UIButton) {

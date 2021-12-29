@@ -10,13 +10,12 @@ import UIKit
 class UnderlineButton: UIButton {
     
     // MARK: - Properties
-    let button = UIButton()
-    let underline = UIView()
-    let buttonsStackView = UIStackView()
+    private let button = UIButton()
+    private let underline = UIView()
+    private let buttonsStackView = UIStackView()
 
     init() {
         super.init(frame: .zero)
-        
         setupUI()
     }
     

@@ -16,6 +16,8 @@
 		A1C5F2102779E12200865E08 /* UnderlineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F20F2779E12200865E08 /* UnderlineButton.swift */; };
 		A1C5F216277B59DD00865E08 /* Gupter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1C5F213277B59DC00865E08 /* Gupter-Bold.ttf */; };
 		A1C5F218277B59DD00865E08 /* Gupter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1C5F215277B59DD00865E08 /* Gupter-Regular.ttf */; };
+		A1C5F21A277C911D00865E08 /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F219277C911D00865E08 /* SignInButton.swift */; };
+		A1C5F21C277C961E00865E08 /* SignInPreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F21B277C961E00865E08 /* SignInPreviewContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A1C5F20F2779E12200865E08 /* UnderlineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineButton.swift; sourceTree = "<group>"; };
 		A1C5F213277B59DC00865E08 /* Gupter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gupter-Bold.ttf"; sourceTree = "<group>"; };
 		A1C5F215277B59DD00865E08 /* Gupter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gupter-Regular.ttf"; sourceTree = "<group>"; };
+		A1C5F219277C911D00865E08 /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
+		A1C5F21B277C961E00865E08 /* SignInPreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPreviewContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +80,11 @@
 		A1C5F2062779D45500865E08 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A1C5F20C2779D50B00865E08 /* Cells */,
+				A1C5F219277C911D00865E08 /* SignInButton.swift */,
+				A1C5F21B277C961E00865E08 /* SignInPreviewContent.swift */,
 				A1C5F20D2779DF8A00865E08 /* PreviewContent.swift */,
 				A1C5F20F2779E12200865E08 /* UnderlineButton.swift */,
+				A1C5F20C2779D50B00865E08 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,10 +219,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C5F1F72779BA9D00865E08 /* LoginScreenViewController.swift in Sources */,
+				A1C5F21C277C961E00865E08 /* SignInPreviewContent.swift in Sources */,
 				A1C5F1F32779BA9D00865E08 /* AppDelegate.swift in Sources */,
 				A1C5F20E2779DF8A00865E08 /* PreviewContent.swift in Sources */,
 				A1C5F2102779E12200865E08 /* UnderlineButton.swift in Sources */,
 				A1C5F1F52779BA9D00865E08 /* SceneDelegate.swift in Sources */,
+				A1C5F21A277C911D00865E08 /* SignInButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
