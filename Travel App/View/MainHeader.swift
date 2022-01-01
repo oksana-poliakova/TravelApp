@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainHeader: UIView {
+class : UIView {
 
 
 

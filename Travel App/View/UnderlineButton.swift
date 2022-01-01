@@ -24,7 +24,7 @@ class UnderlineButton: UIButton {
     }
     
     // MARK: - Setup UI
-    func setupUI() {
+    private func setupUI() {
         /// Button "Create an account"
         button.setTitle("Create an account", for: .normal)
         button.tintColor = .white

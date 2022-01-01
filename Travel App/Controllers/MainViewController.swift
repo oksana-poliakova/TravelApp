@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
         /// Appearance
         let tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
+        tableView.backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
         
         /// Cells
        // tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -32,8 +32,8 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
+//
+//        view.backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
         view.addSubview(tableView)
         setNavigationBar()
         setupTableView()
@@ -85,12 +85,8 @@ extension MainViewController: UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 100
-    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = MainHeader()
+        let header = ViewForHeader()
         return header
     }
     
