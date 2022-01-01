@@ -86,7 +86,7 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = ViewForHeader()
+        let header = SearchSectionView()
         return header
     }
     

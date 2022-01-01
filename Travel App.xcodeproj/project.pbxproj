@@ -20,7 +20,7 @@
 		A1C5F21C277C961E00865E08 /* SignInPreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F21B277C961E00865E08 /* SignInPreviewContent.swift */; };
 		A1C5F21E277DDA1300865E08 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F21D277DDA1300865E08 /* MainViewController.swift */; };
 		A1C5F220277DE48300865E08 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F21F277DE48300865E08 /* MainTableViewCell.swift */; };
-		A1C5F222277DEA8900865E08 /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F221277DEA8900865E08 /* MainHeader.swift */; };
+		A1C5F2242780ABF500865E08 /* SearchSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F2232780ABF500865E08 /* SearchSectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		A1C5F21B277C961E00865E08 /* SignInPreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPreviewContent.swift; sourceTree = "<group>"; };
 		A1C5F21D277DDA1300865E08 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A1C5F21F277DE48300865E08 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
-		A1C5F221277DEA8900865E08 /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
+		A1C5F2232780ABF500865E08 /* SearchSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 				A1C5F21B277C961E00865E08 /* SignInPreviewContent.swift */,
 				A1C5F20D2779DF8A00865E08 /* PreviewContent.swift */,
 				A1C5F20F2779E12200865E08 /* UnderlineButton.swift */,
+				A1C5F2232780ABF500865E08 /* SearchSectionView.swift */,
 				A1C5F20C2779D50B00865E08 /* Cells */,
-				A1C5F221277DEA8900865E08 /* MainHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,8 +232,8 @@
 				A1C5F21C277C961E00865E08 /* SignInPreviewContent.swift in Sources */,
 				A1C5F1F32779BA9D00865E08 /* AppDelegate.swift in Sources */,
 				A1C5F20E2779DF8A00865E08 /* PreviewContent.swift in Sources */,
-				A1C5F222277DEA8900865E08 /* MainHeader.swift in Sources */,
 				A1C5F2102779E12200865E08 /* UnderlineButton.swift in Sources */,
+				A1C5F2242780ABF500865E08 /* SearchSectionView.swift in Sources */,
 				A1C5F1F52779BA9D00865E08 /* SceneDelegate.swift in Sources */,
 				A1C5F21A277C911D00865E08 /* SignInButton.swift in Sources */,
 				A1C5F21E277DDA1300865E08 /* MainViewController.swift in Sources */,
