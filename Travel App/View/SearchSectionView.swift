@@ -52,7 +52,7 @@ class SearchSectionView: UIView {
   
         containerStackView.alignment = .fill
         containerStackView.distribution = .fill
-        containerStackView.spacing = 2
+        containerStackView.spacing = 20
         containerStackView.axis = .vertical
         
         /// Container for textField and search button

@@ -21,6 +21,7 @@
 		A1C5F21E277DDA1300865E08 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F21D277DDA1300865E08 /* MainViewController.swift */; };
 		A1C5F220277DE48300865E08 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F21F277DE48300865E08 /* MainTableViewCell.swift */; };
 		A1C5F2242780ABF500865E08 /* SearchSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F2232780ABF500865E08 /* SearchSectionView.swift */; };
+		A1C5F22627834AC800865E08 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F22527834AC800865E08 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		A1C5F21D277DDA1300865E08 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A1C5F21F277DE48300865E08 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		A1C5F2232780ABF500865E08 /* SearchSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionView.swift; sourceTree = "<group>"; };
+		A1C5F22527834AC800865E08 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				A1C5F1F62779BA9D00865E08 /* LoginScreenViewController.swift */,
 				A1C5F21D277DDA1300865E08 /* MainViewController.swift */,
+				A1C5F22527834AC800865E08 /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				A1C5F2102779E12200865E08 /* UnderlineButton.swift in Sources */,
 				A1C5F2242780ABF500865E08 /* SearchSectionView.swift in Sources */,
 				A1C5F1F52779BA9D00865E08 /* SceneDelegate.swift in Sources */,
+				A1C5F22627834AC800865E08 /* TabBarController.swift in Sources */,
 				A1C5F21A277C911D00865E08 /* SignInButton.swift in Sources */,
 				A1C5F21E277DDA1300865E08 /* MainViewController.swift in Sources */,
 			);

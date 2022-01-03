@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
         let tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
+        tableView.separatorColor = .clear
         
         /// Cells
        // tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
