@@ -22,6 +22,8 @@
 		A1C5F220277DE48300865E08 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F21F277DE48300865E08 /* MainTableViewCell.swift */; };
 		A1C5F2242780ABF500865E08 /* SearchSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F2232780ABF500865E08 /* SearchSectionView.swift */; };
 		A1C5F22627834AC800865E08 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F22527834AC800865E08 /* TabBarController.swift */; };
+		A1C5F22A2785E71C00865E08 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F2292785E71C00865E08 /* CardCollectionViewCell.swift */; };
+		A1C5F22C2785E91B00865E08 /* CountryCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F22B2785E91B00865E08 /* CountryCards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		A1C5F21F277DE48300865E08 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		A1C5F2232780ABF500865E08 /* SearchSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSectionView.swift; sourceTree = "<group>"; };
 		A1C5F22527834AC800865E08 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A1C5F2292785E71C00865E08 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1C5F22B2785E91B00865E08 /* CountryCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		A1C5F2082779D46400865E08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1C5F22B2785E91B00865E08 /* CountryCards.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				A1C5F21F277DE48300865E08 /* MainTableViewCell.swift */,
+				A1C5F2292785E71C00865E08 /* CardCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -234,7 +240,9 @@
 				A1C5F220277DE48300865E08 /* MainTableViewCell.swift in Sources */,
 				A1C5F21C277C961E00865E08 /* SignInPreviewContent.swift in Sources */,
 				A1C5F1F32779BA9D00865E08 /* AppDelegate.swift in Sources */,
+				A1C5F22A2785E71C00865E08 /* CardCollectionViewCell.swift in Sources */,
 				A1C5F20E2779DF8A00865E08 /* PreviewContent.swift in Sources */,
+				A1C5F22C2785E91B00865E08 /* CountryCards.swift in Sources */,
 				A1C5F2102779E12200865E08 /* UnderlineButton.swift in Sources */,
 				A1C5F2242780ABF500865E08 /* SearchSectionView.swift in Sources */,
 				A1C5F1F52779BA9D00865E08 /* SceneDelegate.swift in Sources */,
