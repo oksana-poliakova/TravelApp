@@ -11,31 +11,42 @@ class MainTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
-    private lazy var collectionView: UICollectionView = {
+    private var size = CGSize(width: 200, height: 300)
+    
+    private var places: [PlaceCards] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+    
+    lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
-        collectionView.showsVerticalScrollIndicator = false
         collectionView.register(CardCollectionViewCell.self, forCellWithReuseIdentifier: cardCollectionViewCellID)
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.isScrollEnabled = true
+        /// Without this effect wont be visible
+        layout.scrollDirection = .horizontal
         return collectionView
     }()
     
     private lazy var layout = UICollectionViewFlowLayout()
     private let cardCollectionViewCellID = "CardCollectionViewCell"
 
-    
-    private let countryCards: [CountryCards] = [CountryCards(title: "Country1", image: UIImage(named: "country.pdf"), rating: 4.5),
-                                                CountryCards(title: "Country2", image: UIImage(named: "country.pdf"), rating: 4.2),
-                                                CountryCards(title: "Country3", image: UIImage(named: "country.pdf"), rating: 4.8)]
-    
+    public var placeCards: [PlaceCards] = [PlaceCards(title: "Country", image: UIImage(named: "country.pdf"), rating: 4.5, country: "Country name", locationIcon: UIImage(named: "location.pdf")),
+                                           PlaceCards(title: "Country 2", image: UIImage(named: "country.pdf"), rating: 4.5, country: "Country name", locationIcon: UIImage(named: "location.pdf")),
+                                           PlaceCards(title: "Country 3", image: UIImage(named: "country.pdf"), rating: 4.5, country: "Country name", locationIcon: UIImage(named: "location.pdf"))
+    ]
+
     // MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
-        
+        setupUI()
     }
     
     required init?(coder: NSCoder) {
@@ -45,14 +56,14 @@ class MainTableViewCell: UITableViewCell {
     // MARK: - Setup UI
     
     private func setupUI() {
-        addSubview(collectionView)
+        contentView.addSubview(collectionView)
         
         /// Constraints
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 40),
+            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
     }
 
@@ -61,20 +72,28 @@ class MainTableViewCell: UITableViewCell {
 // MARK: - UICollectionViewDelegate
 
 extension MainTableViewCell: UICollectionViewDelegate {
-    
+
 }
 
 // MARK: - UICollectionViewDataSource
 
 extension MainTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        countryCards.count
+        placeCards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cardCollectionViewCellID, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
-        cell.backgroundColor = .blue
+        cell.configurePlaces(model: placeCards[indexPath.row])
         return cell
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
+
+extension MainTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: size.width, height: size.height)
+    }
+    
+}

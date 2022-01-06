@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     
     private lazy var tableView: UITableView = {
         /// Appearance
-        let tableView = UITableView(frame: view.bounds, style: .plain)
+        let tableView = UITableView(frame: view.bounds, style: .grouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
         tableView.separatorColor = .clear
@@ -71,14 +71,20 @@ class MainViewController: UIViewController {
 // MARK: - UITableViewDelegate
 
 extension MainViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
 }
 
 // MARK: - UITableViewDataSource
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

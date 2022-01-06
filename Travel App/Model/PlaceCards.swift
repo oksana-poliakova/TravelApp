@@ -7,8 +7,12 @@
 
 import UIKit
 
-struct CountryCards {
+struct PlaceCards {
     let title: String
     let image: UIImage?
     let rating: Float?
+    let country: String
+    let locationIcon: UIImage?
 }
+
+
