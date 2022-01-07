@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
     // MARK: - Properties
     
     private let idMainCell = "idMainCell"

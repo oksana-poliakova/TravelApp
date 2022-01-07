@@ -28,7 +28,6 @@ class MainTableViewCell: UITableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isScrollEnabled = true
-        /// Without this effect wont be visible
         layout.scrollDirection = .horizontal
         return collectionView
     }()
@@ -47,6 +46,18 @@ class MainTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
         setupUI()
+        configView()
+        
+    }
+    
+    private func configView() {
+        self.clipsToBounds = false
+        self.backgroundColor = .systemBackground
+        self.layer.cornerRadius = 10
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 0.0)
+        self.layer.shadowRadius = 10
+        self.layer.shadowOpacity = 0.2
     }
     
     required init?(coder: NSCoder) {
@@ -56,6 +67,7 @@ class MainTableViewCell: UITableViewCell {
     // MARK: - Setup UI
     
     private func setupUI() {
+        /// Custom subviews should be added to the content view
         contentView.addSubview(collectionView)
         
         /// Constraints

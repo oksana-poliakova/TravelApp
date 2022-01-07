@@ -24,6 +24,7 @@
 		A1C5F22627834AC800865E08 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F22527834AC800865E08 /* TabBarController.swift */; };
 		A1C5F22A2785E71C00865E08 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F2292785E71C00865E08 /* CardCollectionViewCell.swift */; };
 		A1C5F22C2785E91B00865E08 /* PlaceCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F22B2785E91B00865E08 /* PlaceCards.swift */; };
+		A1C5F22E2788675800865E08 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C5F22D2788675800865E08 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A1C5F22527834AC800865E08 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A1C5F2292785E71C00865E08 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		A1C5F22B2785E91B00865E08 /* PlaceCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCards.swift; sourceTree = "<group>"; };
+		A1C5F22D2788675800865E08 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				A1C5F1F62779BA9D00865E08 /* LoginScreenViewController.swift */,
 				A1C5F21D277DDA1300865E08 /* MainViewController.swift */,
 				A1C5F22527834AC800865E08 /* TabBarController.swift */,
+				A1C5F22D2788675800865E08 /* BaseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				A1C5F21C277C961E00865E08 /* SignInPreviewContent.swift in Sources */,
 				A1C5F1F32779BA9D00865E08 /* AppDelegate.swift in Sources */,
 				A1C5F22A2785E71C00865E08 /* CardCollectionViewCell.swift in Sources */,
+				A1C5F22E2788675800865E08 /* BaseViewController.swift in Sources */,
 				A1C5F20E2779DF8A00865E08 /* PreviewContent.swift in Sources */,
 				A1C5F22C2785E91B00865E08 /* PlaceCards.swift in Sources */,
 				A1C5F2102779E12200865E08 /* UnderlineButton.swift in Sources */,

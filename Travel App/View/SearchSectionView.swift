@@ -87,7 +87,7 @@ class SearchSectionView: UIView {
             
             containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            containerStackView.topAnchor.constraint(equalTo: topAnchor),
+            containerStackView.topAnchor.constraint(equalTo: topAnchor, constant: 25),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
