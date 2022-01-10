@@ -20,5 +20,16 @@ class BaseViewController: UIViewController {
             navigationController?.navigationBar.scrollEdgeAppearance = appearance
         }
         
+        if #available(iOS 13.0, *) {
+           let appearance = UINavigationBarAppearance()
+           appearance.configureWithOpaqueBackground()
+           appearance.backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
+           appearance.shadowColor = .clear
+           appearance.shadowImage = UIImage()
+           navigationController?.navigationBar.standardAppearance = appearance;
+           navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
+            
+       }
+        
     }
 }

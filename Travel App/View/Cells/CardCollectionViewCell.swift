@@ -14,7 +14,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     private let cardImageView = UIImageView()
     private let placeNameLabel = UILabel()
     private let countryNameLabel = UILabel()
-    private let locationIconImageView = UIImageView()
+    private var locationIconImageView = UIImageView()
     private let iconAndCountryNameStackView = UIStackView()
         
     override init(frame: CGRect) {
@@ -30,7 +30,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     public func configView() {
         self.clipsToBounds = false
         self.layer.masksToBounds = true
-        self.backgroundColor = .systemBackground
+        self.backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
         self.layer.cornerRadius = 10
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 0.0)
@@ -66,17 +66,17 @@ class CardCollectionViewCell: UICollectionViewCell {
         placeNameLabel.font = UIFont(name: "Gupter-Bold", size: 28)
                 
         countryNameLabel.textColor = UIColor(red: 200/255.0, green: 44/255.0, blue: 44/255.0, alpha: 1.0)
-        placeNameLabel.font = UIFont(name: "Gupter-Bold", size: 24)
+        countryNameLabel.font = UIFont(name: "Gupter-Bold", size: 24)
         
         locationIconImageView.tintColor = UIColor(red: 200/255.0, green: 44/255.0, blue: 44/255.0, alpha: 1.0)
         
         /// StackView with icon and country name
         iconAndCountryNameStackView.axis = .horizontal
         iconAndCountryNameStackView.distribution = .fill
-        iconAndCountryNameStackView.spacing = 20
-        iconAndCountryNameStackView.alignment = .center
+        iconAndCountryNameStackView.spacing = 6
+        iconAndCountryNameStackView.alignment = .fill
 
-        [countryNameLabel, locationIconImageView].forEach {
+        [locationIconImageView, countryNameLabel].forEach {
             iconAndCountryNameStackView.addArrangedSubview($0)
         }
         
@@ -92,15 +92,17 @@ class CardCollectionViewCell: UICollectionViewCell {
             cardImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             cardImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             
-            placeNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            placeNameLabel.bottomAnchor.constraint(equalTo: iconAndCountryNameStackView.topAnchor, constant: -10),
             placeNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             placeNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            placeNameLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            iconAndCountryNameStackView.topAnchor.constraint(equalTo: placeNameLabel.bottomAnchor, constant: 20),
-            iconAndCountryNameStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            iconAndCountryNameStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            iconAndCountryNameStackView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            locationIconImageView.widthAnchor.constraint(equalToConstant: 20),
+            locationIconImageView.heightAnchor.constraint(equalToConstant: 20),
+            
+            iconAndCountryNameStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
+            iconAndCountryNameStackView.leadingAnchor.constraint(equalTo: placeNameLabel.leadingAnchor, constant: 0),
+            iconAndCountryNameStackView.heightAnchor.constraint(equalTo: locationIconImageView.heightAnchor),
+            iconAndCountryNameStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
     }
 }

@@ -11,7 +11,7 @@ class MainTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
-    private var size = CGSize(width: 200, height: 300)
+    private var size = CGSize(width: 250, height: 440)
     
     private var places: [PlaceCards] = [] {
         didSet {
@@ -97,6 +97,7 @@ extension MainTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cardCollectionViewCellID, for: indexPath) as? CardCollectionViewCell else { return UICollectionViewCell() }
         cell.configurePlaces(model: placeCards[indexPath.row])
+        cell.backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
         return cell
     }
 }
