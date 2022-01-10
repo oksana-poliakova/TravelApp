@@ -20,7 +20,6 @@ class MainViewController: BaseViewController {
         tableView.separatorColor = .clear
         
         /// Cells
-       // tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.register(MainTableViewCell.self, forCellReuseIdentifier: idMainCell)
         
         /// Delegate & DataSource
@@ -49,6 +48,7 @@ class MainViewController: BaseViewController {
         
         let menuBarButtonItem = UIBarButtonItem(image: UIImage(named: "menu"), style: .done, target: self, action: #selector(menuTapped))
         navigationItem.rightBarButtonItem = menuBarButtonItem
+        menuBarButtonItem.tintColor = .black
     }
     
     @objc func menuTapped() {

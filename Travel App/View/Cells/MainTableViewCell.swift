@@ -50,14 +50,11 @@ class MainTableViewCell: UITableViewCell {
         
     }
     
+    // Corner radius for cells
     private func configView() {
-        self.clipsToBounds = false
-        self.backgroundColor = .systemBackground
-        self.layer.cornerRadius = 10
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 0.0)
-        self.layer.shadowRadius = 10
-        self.layer.shadowOpacity = 0.2
+        clipsToBounds = false
+        backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
+        layer.cornerRadius = 10
     }
     
     required init?(coder: NSCoder) {

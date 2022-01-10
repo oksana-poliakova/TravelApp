@@ -28,8 +28,6 @@ class BaseViewController: UIViewController {
            appearance.shadowImage = UIImage()
            navigationController?.navigationBar.standardAppearance = appearance;
            navigationController?.navigationBar.scrollEdgeAppearance = navigationController?.navigationBar.standardAppearance
-            
        }
-        
     }
 }
