@@ -7,12 +7,16 @@
 
 import UIKit
 
+protocol MainTableViewCellDelegate: AnyObject {
+    func passPlace(place: PlaceCards)
+}
+
 class MainTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
     private var size = CGSize(width: 250, height: 440)
-    
+
     private var places: [PlaceCards] = [] {
         didSet {
             collectionView.reloadData()
@@ -34,6 +38,9 @@ class MainTableViewCell: UITableViewCell {
     
     private lazy var layout = UICollectionViewFlowLayout()
     private let cardCollectionViewCellID = "CardCollectionViewCell"
+    
+    /// Делаем слабым, чтобы избежать утечки памяти memory leak
+    weak var delegate: MainTableViewCellDelegate?
 
     public var placeCards: [PlaceCards] = [PlaceCards(title: "Country", image: UIImage(named: "country.pdf"), rating: 4.5, country: "Country name", locationIcon: UIImage(named: "location.pdf")),
                                            PlaceCards(title: "Country 2", image: UIImage(named: "country.pdf"), rating: 4.5, country: "Country name", locationIcon: UIImage(named: "location.pdf")),
@@ -81,7 +88,9 @@ class MainTableViewCell: UITableViewCell {
 // MARK: - UICollectionViewDelegate
 
 extension MainTableViewCell: UICollectionViewDelegate {
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.passPlace(place: placeCards[indexPath.row])
+    }
 }
 
 // MARK: - UICollectionViewDataSource

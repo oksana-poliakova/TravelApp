@@ -32,8 +32,7 @@ class MainViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        view.backgroundColor = UIColor(red: 224/255.0, green: 215/255.0, blue: 215/255.0, alpha: 1.0)
+
         view.addSubview(tableView)
         setNavigationBar()
         setupTableView()
@@ -89,6 +88,7 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: idMainCell) as? MainTableViewCell else { return UITableViewCell() }
+        cell.delegate = self
         return cell
     }
     
@@ -96,6 +96,10 @@ extension MainViewController: UITableViewDataSource {
         let header = SearchSectionView()
         return header
     }
-    
-    
+}
+
+extension MainViewController: MainTableViewCellDelegate {
+    func passPlace(place: PlaceCards) {
+        navigationController?.pushViewController(CardViewController(placeCards: place), animated: true)
+    }
 }
